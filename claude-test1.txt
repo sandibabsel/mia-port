@@ -1,0 +1,118 @@
+python3 strxref.py ../mia_exefs/main "Virtual memory must be enabled" --before 90 --after 15
+"Virtual memory must be enabled" at image offsets: 0x5208476
+
+=== reference at +0xba916c; function +0xba9004..+0xba91a8 (105 instructions)
+  ba9004:  lsr     x3, x2, #0x14
+  ba9008:  str     w8, [sp]
+  ba900c:  adrp    x1, #0x51aa000
+  ba9010:  add     x1, x1, #0x7e8
+  ba9014:  str     x22, [sp, #0x18]
+  ba9018:  mov     x0, sp
+  ba901c:  stp     x24, x23, [sp, #8]
+  ba9020:  str     d8, [sp, #0x20]
+  ba9024:  strb    wzr, [sp, #0x28]
+  ba9028:  stp     xzr, xzr, [sp, #0x30]
+  ba902c:  bl      #0x3a60660   ; 
+  ba9030:  ldr     x1, [x21, #0xbf0]
+  ba9034:  sub     x0, x29, #8
+  ba9038:  bl      #0x3a606a0   ; 
+  ba903c:  cbnz    w0, #0xba91c4
+  ba9040:  ldur    x0, [x29, #-8]
+  ba9044:  ldr     x1, [x21, #0xbf0]
+  ba9048:  bl      #0x3a5f460   ; _ZN2nn4init19InitializeAllocatorEPvm
+  ba904c:  mov     x0, x19
+  ba9050:  bl      #0x3a60650   ; 
+  ba9054:  ldp     x8, x9, [x19]
+  ba9058:  mov     w10, #0x127
+  ba905c:  adrp    x1, #0x5191000
+  ba9060:  add     x1, x1, #0x401
+  ba9064:  mov     x0, sp
+  ba9068:  stp     x24, x23, [sp, #8]
+  ba906c:  str     w10, [sp]
+  ba9070:  str     x22, [sp, #0x18]
+  ba9074:  sub     x8, x8, x9
+  ba9078:  str     d8, [sp, #0x20]
+  ba907c:  and     x2, x8, #0xffffffffffe00000
+  ba9080:  lsr     x3, x2, #0x14
+  ba9084:  strb    wzr, [sp, #0x28]
+  ba9088:  stp     xzr, xzr, [sp, #0x30]
+  ba908c:  bl      #0x3a60660   ; 
+  ba9090:  mov     w8, #0x128
+  ba9094:  str     w8, [sp]
+  ba9098:  adrp    x8, #0x60c5000
+  ba909c:  stp     x24, x23, [sp, #8]
+  ba90a0:  ldr     x2, [x8, #0xc48]
+  ba90a4:  lsr     x3, x2, #0x14
+  ba90a8:  adrp    x1, #0x5210000
+  ba90ac:  add     x1, x1, #0x6f8
+  ba90b0:  mov     x0, sp
+  ba90b4:  str     x22, [sp, #0x18]
+  ba90b8:  str     d8, [sp, #0x20]
+  ba90bc:  strb    wzr, [sp, #0x28]
+  ba90c0:  stp     xzr, xzr, [sp, #0x30]
+  ba90c4:  bl      #0x3a60660   ; 
+  ba90c8:  adrp    x8, #0x60c5000
+  ba90cc:  ldrb    w8, [x8, #0xc98]
+  ba90d0:  cbz     w8, #0xba9100
+  ba90d4:  mov     w8, #0x169
+  ba90d8:  adrp    x1, #0x51a2000
+  ba90dc:  add     x1, x1, #0x24a
+  ba90e0:  mov     x0, sp
+  ba90e4:  str     w8, [sp]
+  ba90e8:  str     x22, [sp, #0x18]
+  ba90ec:  stp     x24, x23, [sp, #8]
+  ba90f0:  str     d8, [sp, #0x20]
+  ba90f4:  strb    wzr, [sp, #0x28]
+  ba90f8:  stp     xzr, xzr, [sp, #0x30]
+  ba90fc:  bl      #0x3a60660   ; 
+  ba9100:  adrp    x0, #0xba9000
+  ba9104:  add     x0, x0, #0x210
+  ba9108:  adrp    x1, #0xba9000
+  ba910c:  add     x1, x1, #0x230
+  ba9110:  bl      #0x3a606b0   ; 
+  ba9114:  mov     w8, #0x16f
+  ba9118:  adrp    x1, #0x51f6000
+  ba911c:  add     x1, x1, #0x3b2
+  ba9120:  mov     x0, sp
+  ba9124:  str     w8, [sp]
+  ba9128:  str     x22, [sp, #0x18]
+  ba912c:  stp     x24, x23, [sp, #8]
+  ba9130:  str     d8, [sp, #0x20]
+  ba9134:  strb    wzr, [sp, #0x28]
+  ba9138:  stp     xzr, xzr, [sp, #0x30]
+  ba913c:  bl      #0x3a60660   ; 
+  ba9140:  ldr     d8, [sp, #0x40]
+  ba9144:  ldp     x20, x19, [sp, #0xa0]
+  ba9148:  ldp     x22, x21, [sp, #0x90]
+  ba914c:  ldp     x24, x23, [sp, #0x80]
+  ba9150:  ldp     x26, x25, [sp, #0x70]
+  ba9154:  ldp     x28, x27, [sp, #0x60]
+  ba9158:  ldp     x29, x30, [sp, #0x50]
+  ba915c:  add     sp, sp, #0xb0
+  ba9160:  ret     
+  ba9164:  mov     w8, #0x12d
+  ba9168:  adrp    x1, #0x5208000
+  ba916c:  add     x1, x1, #0x476  <== string
+  ba9170:  mov     x0, sp
+  ba9174:  str     w8, [sp]
+  ba9178:  str     x22, [sp, #0x18]
+  ba917c:  stp     x24, x23, [sp, #8]
+  ba9180:  str     d8, [sp, #0x20]
+  ba9184:  strb    wzr, [sp, #0x28]
+  ba9188:  stp     xzr, xzr, [sp, #0x30]
+  ba918c:  bl      #0x3a60660   ; 
+  ba9190:  mov     w0, #1
+  ba9194:  bl      #0x3a606c0   ; 
+  ba9198:  mov     w8, #0x10c
+  ba919c:  and     w3, w0, #0x1ff
+  ba91a0:  str     w8, [sp]
+  ba91a4:  ubfx    w4, w0, #9, #0xd
+(venv) [sandi@imphnen tools]$ cd ..
+(venv) [sandi@imphnen BOTWRecompAndroid]$ grep -n -E "SetHeapSize|nn::init::Start|init (main|sdk)|UNIMPLEMENTED|GetInfo|main thread" full.log | head -60
+15835:11-02 09:45:01.090 I/BOTWRecompAndroid(10453): main thread: prio 44, stack 0x10000
+15836:11-02 09:45:01.097 I/BOTWRecompAndroid(10453): nn::init::Start at 1102dbb80 (init, init, fini)
+15837:11-02 09:45:01.099 I/BOTWRecompAndroid(10453): [kernel] GetInfo used memory -> 0x4000000 (heap 0)
+15838:11-02 09:45:01.099 I/BOTWRecompAndroid(10453): [kernel] GetInfo total memory -> 0xcd500000
+15839:11-02 09:45:01.099 I/BOTWRecompAndroid(10453): init sdk (DT_INIT 110000030, 112 init_array entries)
+15875:11-02 09:45:01.106 I/BOTWRecompAndroid(10453): [kernel] GetInfo used memory -> 0x4000000 (heap 0)
+15876:11-02 09:45:01.106 I/BOTWRecompAndroid(10453): [kernel] GetInfo total memory -> 0xcd500000
